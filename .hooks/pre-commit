@@ -1,0 +1,15 @@
+#!/bin/bash
+
+printf "== executes pre-commit script ==\n\n"
+
+printf 'records packages.txt ...'
+make pre-commit >/dev/null 2>&1
+git diff --exit-code packages.txt &> /dev/null
+if [ $? -eq 1 ]; then
+    printf "\nERR: packages.txt differs, please re-add it to your commit.\n"
+    exit 1
+fi
+
+printf '\rrecords packages.txt ...ok\n'
+
+printf "\n== end of pre-commit script ==\n\n"
