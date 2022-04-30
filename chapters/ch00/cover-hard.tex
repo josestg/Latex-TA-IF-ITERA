@@ -6,20 +6,20 @@
 
     \begin{figure}[h]
     	\centering
-    	\includegraphics[width=2.1cm, height=2.5cm, keepaspectratio]{resources/itera-logo}
+    	\includegraphics[width=2.1cm, height=2.5cm, keepaspectratio]{figures/itera-logo}
     \end{figure}
 
-	\Large \bfseries \MakeUppercase{\thetitle}
+	\large \bfseries \MakeUppercase{\thetitle}
 	\vfill
 
-    \Large \uppercase{Tugas Akhir}
+    \large \uppercase{Tugas Akhir}
     \vfill
 
     \normalsize \normalfont \theauthor\\
-    NIM \printnim
+    \printnim
     \vfill
 
-    \large \bfseries
+    \normalsize \bfseries
     \uppercase{
         Program Studi Teknik Informatika \\
         Jurusan Teknologi Produksi dan Industri\\
@@ -27,7 +27,9 @@
         Lampung Selatan
     }\medskip
 
-    \thedate
+    %\thedate
+    % automatic year
+    \the\year{}
 
 \end{center}
 

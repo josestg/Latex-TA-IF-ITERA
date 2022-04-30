@@ -24,44 +24,8 @@
 \bibliography{references}
 
 \begin{document}
-% 	\pagestyle{plain}
-% 	\fancyhf{}
-% 	\rfoot{Halaman \thepage}%
-
-
     \sloppy % mencegah text overflow.
-
-    %Basic configuration
-    \title{Judul Tugas Akhir} 	% Judul Tugas Akhir
-    \titleEN{Thesis Title}                  % Thesis Title
-    \author{Nama Mahasiswa}		% Nama Mahasiswa
-	\nim{1234567890}				% NIM Mahasiswa
-	\dosbingA%
-		{Nama dan Gelar Pembimbing I}%	% Nama Dosen Pembimbing 1
-		{NIP. 123456789}				% NIP Dosen Pembimbing 1
-	\dosbingB%
-		{Nama dan Gelar Pembimbing II}%	% Nama Dosen Pembimbing 2
-		{NIP. 123456789}				% NIP Dosen Pembimbing 2
-
-    \pagenumbering{roman}
-    \setcounter{page}{0}
-
-    \input{chapters/cover-hard} % Hardcover
-    \input{chapters/cover-soft} % Softcover
-    \input{chapters/approval}
-    \input{chapters/statement}
-    \input{chapters/publication}
-
-    \input{chapters/abstract-id}
-    \input{chapters/abstract-en}
-    \input{chapters/motto}
-    \input{chapters/dedicated}
-    \input{chapters/forewords}
-
-    \tableofcontents
-    \listoffigures
-    \listoftables
-    \input{chapters/symbols}
+    \input{chapters/ch00/index.tex}
 
     %----------------------------------------------------------------%
     % Konfigurasi Bab
@@ -86,12 +50,18 @@
     % Daftar Bab
     % Untuk menambahkan daftar bab, buat berkas bab misalnya `chapter-6` di direktori `chapters`, dan masukkan ke sini.
     %----------------------------------------------------------------%
+
+    % Reset penomoran halaman menjadi 1
+    \clearpage
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+
     \justifying
-    \input{chapters/chapter-1}
-    \input{chapters/chapter-2}
-    \input{chapters/chapter-3}
-    \input{chapters/chapter-4}
-    \input{chapters/chapter-5}
+    \input{chapters/ch01/index.tex}
+    \input{chapters/ch02/index.tex}
+    \input{chapters/ch03/index.tex}
+    \input{chapters/ch04/index.tex}
+    \input{chapters/ch05/index.tex}
     %----------------------------------------------------------------%
 
     % Daftar pustaka
@@ -106,7 +76,7 @@
     \addcontentsline{toc}{part}{Lampiran}
     \part*{Lampiran}
 
-    \input{chapters/appendix-1}
-    \input{chapters/appendix-2}
+    \input{chapters/ch99/appendix-1.tex}
+    \input{chapters/ch99/appendix-2.tex}
 
 \end{document}
