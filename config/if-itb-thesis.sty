@@ -96,8 +96,8 @@
 \makeatother
 
 % Counter untuk figure dan table.
-\counterwithin{figure}{section}
-\counterwithin{table}{section}
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
 
 % Supaya tidak ada garis di header
 \renewcommand{\headrulewidth}{0pt}
@@ -106,7 +106,7 @@
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 
 % Setting penomoran caption tabel
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 
 % Mengkapitalkan judul Daftar Isi, Gambar, & Tabel
 \addto\captionsbahasa{%
